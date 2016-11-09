@@ -107,9 +107,9 @@ class game ():
             try:
               import wx
             except:
-              print "Pacman Error: No module wx. Can not ask the user his name!"
-              print "     :(       Download wx from http://www.wxpython.org/"
-              print "     :(       To avoid seeing this error again, set NO_WX in file pacman.pyw."
+              print ("Pacman Error: No module wx. Can not ask the user his name!")
+              print ("     :(       Download wx from http://www.wxpython.org/")
+              print ("     :(       To avoid seeing this error again, set NO_WX in file pacman.pyw.")
               return USER_NAME
             app=wx.App(None)
             dlog=wx.TextEntryDialog(None,"You made the high-score list! Name:")
@@ -224,7 +224,7 @@ class game ():
             
         self.DrawNumber (self.levelNum, (0, self.screenSize[1] - 12) )
             
-    def DrawNumber (self, number, (x, y)):
+    def DrawNumber (self, number, (x, y):
         strNumber = str(number)
         
         for i in range(0, len(str(number)), 1):
@@ -1448,7 +1448,7 @@ thisGame = game()
 thisLevel = level()
 thisLevel.LoadLevel( thisGame.GetLevelNum() )
 
-print thisGame.screenSize
+print (thisGame.screenSize)
 window = pygame.display.set_mode( thisGame.screenSize, pygame.DOUBLEBUF | pygame.HWSURFACE )
 
 # initialise the joystick
